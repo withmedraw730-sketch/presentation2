@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptual Notebook with Explicit TOC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Top Navbar -->
+    <header class="navbar">
+        <h1>✨ Explicit TOC Notebook</h1>
+        <div class="toolbar">
+            <button id="toggle-edit-btn" title="Toggle Edit Mode">Edit Mode</button>
+            <button id="add-toc-h1-btn" title="Add Main TOC Anchor">TOC H1 (+)</button>
+            <button id="add-toc-h2-btn" title="Add Sub TOC Anchor">TOC H2 (+)</button>
+            <button id="add-code-btn" title="Add Code Cell">Code (+)</button>
+            <button id="add-markdown-btn" title="Add General Markdown">MD (+)</button>
+            <button id="export-btn" title="Export Notebook">Export</button>
+            <label for="import-input" class="toolbar button" style="cursor: pointer;">Import</label>
+            <input type="file" id="import-input" accept=".json" style="display: none;">
+        </div>
+    </header>
+
+    <div id="main-content">
+        <!-- Sidebar TOC -->
+        <aside id="sidebar">
+            <h3>Navigation</h3>
+            <ul id="toc-list">
+                <!-- TOC items inserted here -->
+            </ul>
+            <hr>
+            <p style="font-size: 0.8em; color: #777;">TOC is built from explicit Anchor cells.</p>
+        </aside>
+
+        <!-- Main Notebook Area -->
+        <div id="notebook-wrapper">
+            <main id="notebook-container">
+                <!-- Cells will be injected here -->
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
